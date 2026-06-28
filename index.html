@@ -26,12 +26,55 @@
 </head>
 
 <body>
-    <h1>Welcome to BTN's Portfolio</h1>
-    <p>This is a placeholder for the portfolio content.</p>
-    <h2>About Me</h2>
-    <p>I am a passionate 3D artist with a keen eye for detail and a love for creating immersive digital experiences.</p>
-    <h3>My Work</h3>
-    <p>Here you can find a selection of my recent projects, showcasing my skills in
+    <header> <!-- Thẻ header được dùng để nhóm các nội dung đầu trang, thường chứa logo, tiêu đề và điều hướng -->
+        <a href="#" class="logo">
+            <img src="./img/Symbol Logo.png" alt="Logo" width="50" height="50">
+        </a>
+        <nav class="nav-bar">
+            <ul class="nav-list">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+        <a href="./PDF/NguyenBaTuong_CV.pdf" class="btn-download">
+            Download CV
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                class="icon-download">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" />
+            </svg>
+        </a>
+    </header>
+    <main>
+        <!-- Thẻ main được dùng để nhóm các nội dung chính của trang web, thường chứa các bài viết hoặc thông tin quan trọng -->
+        <section id="home">
+            <!-- Thẻ section được dùng để nhóm các nội dung liên quan, thường chứa các phần của trang web -->
+            <h1>Welcome to My Portfolio</h1>
+            <p>Hi, I'm Ba Tuong Nguyen, a 3D artist. This is my portfolio website where you can find my works and
+                contact me.</p>
+        </section>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I am a passionate 3D artist with experience in creating high-quality 3D models and animations. I love to
+                bring ideas to life through my art.</p>
+        </section>
+        <section id="portfolio">
+            <h2>My Portfolio</h2>
+            <p>Here are some of my recent works:</p>
+            <!-- Add portfolio items here -->
+        </section>
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>If you would like to work with me or have any questions, please feel free to reach out.</p>
+            <!-- Add contact form or contact information here -->
+        </section>
+    </main>
+    <footer>
+        <!-- Thẻ footer được dùng để nhóm các nội dung chân trang, thường chứa thông tin bản quyền, liên kết mạng xã hội và các liên kết phụ -->
+        <p>&copy; 2024 Ba Tuong Nguyen. All rights reserved.</p>
+    </footer>
 </body>
 
 </html>
