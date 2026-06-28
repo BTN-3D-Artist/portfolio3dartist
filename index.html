@@ -47,33 +47,70 @@
             </svg>
         </a>
     </header>
+
     <main>
         <!-- Thẻ main được dùng để nhóm các nội dung chính của trang web, thường chứa các bài viết hoặc thông tin quan trọng -->
-        <section id="home">
-            <!-- Thẻ section được dùng để nhóm các nội dung liên quan, thường chứa các phần của trang web -->
-            <h1>Welcome to My Portfolio</h1>
-            <p>Hi, I'm Ba Tuong Nguyen, a 3D artist. This is my portfolio website where you can find my works and
-                contact me.</p>
+        <section class="hero-section">
+            <div class="hero-container">
+                <p class="hero-badge">3D Modeler & Texture Artist</p>
+                <h1 class="hero-title">
+                    Crafting <span class="text-blue">Cinematic</span> 3D Experiences
+                </h1>
+                <p class="hero-description">
+                    Hi, I'm <strong>Tuong Nguyen</strong> — Showcase of 3D Vehicles, Characters, and Props. Focused on
+                    clean topology and PBR texturing, optimized for games, films, and real-time engines..
+                </p>
+                <menu class="hero-actions">
+                    <li>
+                        <a href="#projects" class="btn btn-primary">
+                            Explore Projects
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" class="icon-arrow">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                    </li>
+                </menu>
+                <dl class="hero-stats">
+                    <div class="stat-group">
+                        <dd class="stat-number">05+</dd>
+                        <dt class="stat-label">Core Projects</dt>
+                    </div>
+                    <div class="stat-group">
+                        <dd class="stat-number">03</dd>
+                        <dt class="stat-label">Industry Awards</dt>
+                    </div>
+                    <div class="stat-group">
+                        <dd class="stat-number">100%</dd>
+                        <dt class="stat-label">Production-Ready</dt>
+                    </div>
+                </dl>
+            </div>
         </section>
-        <section id="about">
+        <article id="about">
+            <img src="./img/Avatar_ver4.png" alt="Nguyen Ba Tuong" class="about-image" loading="lazy">
             <h2>About Me</h2>
             <p>I am a passionate 3D artist with experience in creating high-quality 3D models and animations. I love to
                 bring ideas to life through my art.</p>
-        </section>
-        <section id="portfolio">
+        </article>
+        <article id="portfolio">
             <h2>My Portfolio</h2>
             <p>Here are some of my recent works:</p>
             <!-- Add portfolio items here -->
-        </section>
-        <section id="contact">
+        </article>
+        <article id="contact">
             <h2>Contact Me</h2>
             <p>If you would like to work with me or have any questions, please feel free to reach out.</p>
             <!-- Add contact form or contact information here -->
-        </section>
+        </article>
     </main>
+    <hr>
     <footer>
         <!-- Thẻ footer được dùng để nhóm các nội dung chân trang, thường chứa thông tin bản quyền, liên kết mạng xã hội và các liên kết phụ -->
-        <p>&copy; 2024 Ba Tuong Nguyen. All rights reserved.</p>
+        <p>&copy; 2026 Ba Tuong Nguyen. All rights reserved.</p>
     </footer>
 </body>
 

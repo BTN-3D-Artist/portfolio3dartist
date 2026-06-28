@@ -3,3 +3,7 @@ html {
     font-family: "Montserrat", "Roboto", sans-serif;
     background: hsl(0, 0%, 90%)
 }
+.about-image {
+  width: 20em; /* Điều chỉnh con số này để tăng/giảm kích thước ảnh như ý muốn */
+  height: auto; /* Giữ tỷ lệ ảnh không bị méo */
+}
