@@ -3,7 +3,238 @@ html {
     font-family: "Montserrat", "Roboto", sans-serif;
     background: hsl(0, 0%, 90%)
 }
+
+/* ==========================================================================
+   AVATAR
+   ========================================================================== */
 .about-image {
-  width: 20em; /* Điều chỉnh con số này để tăng/giảm kích thước ảnh như ý muốn */
-  height: auto; /* Giữ tỷ lệ ảnh không bị méo */
+    width: 220px;               /* Đặt chiều rộng vừa phải cho avatar */
+    height: 220px;              /* Bắt buộc chiều cao BẰNG chiều rộng */
+    object-fit: cover;          /* Giữ đúng tỷ lệ ảnh gốc, không bao giờ bị méo hình */
+    object-position: center top;/* Tập trung lấy từ phần đầu và vai của bạn */
+    border-radius: 50%;         /* Nếu thích avatar hình tròn xịn mịn thì giữ dòng này, không thì xóa đi */
+    display: block;
+    margin: 0 auto;             /* Căn giữa ảnh */
+}
+
+/* ==========================================================================
+   LOGO PHẦN MỀM (MAYA, BLENDER...)
+   ========================================================================== */
+/* 1. Định hình lại lưới hiển thị cho các ô phần mềm (nằm ngang hoặc ô vuông thay vì tuột dọc) */
+.software-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;                  /* Khoảng cách giữa các ô phần mềm */
+    list-style: none;           /* Bỏ dấu chấm tròn mặc định của thẻ li */
+    padding: 0;
+}
+
+/* 2. Cấu trúc một ô card phần mềm */
+.software-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #121214;        /* Màu nền tối hợp với giao diện của bạn */
+    padding: 15px;
+    border-radius: 8px;
+    width: calc(50% - 10px);    /* Chia làm 2 cột trên màn hình (hoặc sửa thành 100% nếu muốn xếp dọc gọn gàng) */
+    box-sizing: border-box;
+}
+
+/* 3. ĐÂY LÀ LỆNH QUAN TRỌNG NHẤT: Thu nhỏ logo */
+.software-icon img {
+    width: 48px;                /* Giới hạn logo chỉ to vừa vặn bằng icon (48px) */
+    height: 48px;               /* Giữ khung vuông */
+    object-fit: contain;        /* Đảm bảo logo hiển thị trọn vẹn, không bị mất góc */
+    display: block;
+}
+
+/* 4. Định dạng chữ bên cạnh logo cho đẹp */
+.software-info h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+.software-info p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #808080;             /* Màu chữ mô tả xám nhẹ */
+}
+
+/* ==========================================================================
+   Projects
+   ========================================================================== */
+/* Khung lưới chứa các dự án */
+.projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-top: 20px;
+}
+
+/* Định dạng thẻ card của từng dự án */
+.project-card {
+    background: #111113;
+    border-radius: 12px;
+    overflow: hidden;
+    width: calc(33.33% - 16px); /* Chia màn hình thành 3 cột */
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* Hiệu ứng nổi lên nhẹ khi di chuột vào */
+}
+
+/* THUỘC TÍNH QUAN TRỌNG: Khống chế ảnh không bị méo */
+.project-thumbnail img {
+    width: 100%;
+    height: auto;             /* Bạn có thể tùy chỉnh chiều cao mong muốn cho khung ảnh */
+    object-fit: cover;         /* Giữ nguyên tỷ lệ ảnh gốc, tự động cắt viền thừa */
+    display: block;
+}
+
+/* Phần chữ mô tả dưới ảnh */
+.project-content {
+    padding: 20px;
+}
+
+.project-content h3 {
+    margin: 0 0 10px 0;
+    color: #fff;
+    font-size: 1.25rem;
+}
+
+.project-content p {
+    margin: 0;
+    color: #808080;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* ==========================================================================
+   Awards
+   ========================================================================== */
+/* Khung chứa danh sách giải thưởng */
+.awards-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;                  /* Khoảng cách giữa các ô card */
+    list-style: none;           /* Xóa dấu chấm tròn mặc định của thẻ li */
+    padding: 0;
+    margin-top: 40px;
+}
+
+/* Định dạng từng ô card giải thưởng */
+.award-card {
+    background: #111113;        /* Màu nền tối giống card project */
+    border: 1px solid #222;     /* Viền mờ tinh tế */
+    border-radius: 16px;
+    padding: 30px 24px;
+    text-align: center;         /* Căn giữa toàn bộ chữ và icon */
+    
+    /* Mỗi ô chiếm 1/2 chiều rộng màn hình, trừ đi khoảng cách gap */
+    width: calc(50% - 16px); 
+    box-sizing: border-box;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.award-card:hover {
+    transform: translateY(-5px);
+    border-color: #3b82f6;      /* Đổi màu viền nhẹ khi hover vào */
+}
+
+/* Định dạng phần chữ bên trong */
+.award-content h3 {
+    margin: 15px 0 5px 0;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.award-team {
+    display: block;
+    color: #3b82f6;             /* Màu xanh nhấn giống giao diện của bạn */
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.award-content p,li {
+    margin: 0;
+    color: #808080;
+    font-size: 0.88rem;
+    line-height: 1.6;
+}
+
+/* Khung chứa toàn bộ footer */
+.main-footer {
+    background: #000000;         /* Nền đen tuyền đồng bộ */
+    padding: 60px 0 30px 0;
+    font-family: inherit;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+/* Căn ngang logo và menu điều hướng */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;           /* Hoặc bằng max-width container chung của bạn */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Định dạng phần chữ Logo */
+.footer-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 0.5px;
+}
+
+.footer-tagline {
+    margin: 8px 0 0 0;
+    color: #808080;
+    font-size: 0.9rem;
+}
+
+/* Định dạng menu link bên phải */
+.footer-links {
+    display: flex;
+    gap: 30px;                   /* Khoảng cách giữa các chữ Home, About... */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links a {
+    color: #808080;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #fff;                 /* Sáng lên khi di chuột vào */
+}
+
+/* Đường kẻ ngang thanh mảnh */
+.footer-divider {
+    border: 0;
+    border-top: 1px solid #111113; /* Đường line mờ tối giản */
+    max-width: 1200px;
+    margin: 40px auto 20px auto;
+}
+
+/* Căn giữa dòng chữ Copyright */
+.footer-bottom {
+    text-align: center;
+}
+
+.copyright {
+    color: #444446;              /* Màu chữ trầm xuống để làm nổi bật nội dung chính */
+    font-size: 0.85rem;
 }
